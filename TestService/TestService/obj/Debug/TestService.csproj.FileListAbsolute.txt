@@ -1,0 +1,7 @@
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\bin\Debug\TestService.dll.config
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\bin\Debug\TestService.dll
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\bin\Debug\TestService.pdb
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\obj\Debug\TestService.csprojAssemblyReference.cache
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\obj\Debug\TestService.csproj.CoreCompileInputs.cache
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\obj\Debug\TestService.dll
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\TestService\TestService\obj\Debug\TestService.pdb
