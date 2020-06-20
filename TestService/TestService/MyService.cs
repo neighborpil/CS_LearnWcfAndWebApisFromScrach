@@ -65,7 +65,7 @@ namespace TestService
             string ip = "127.0.0.1";
             string port = "3306";
             string uid = "root";
-            string password = "bkt8a9c0ak";
+            string password = "1111";
             string database = "wcf_test";
             string strConn = $"Server={ip};Port={port};Database={database};Uid={uid};Pwd={password};";
                
