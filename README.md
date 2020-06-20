@@ -1,4 +1,4 @@
-[WCF]
+#WCF
 
 1. Creating a service
 
@@ -18,3 +18,12 @@
 - 서비스 생성은 기본 인터페이스와 인터페이스를 구현하는 클래스로 구성된다.
 
 Interface는 world에 노출되고, class에 구현한 것을 실행한다.
+
+--------------------------
+##SOA
+* Service Oriented Architecture
+ - reusable component on the network
+ - collection of services on a network that communicate with one another
+ - Services are well-defined, platform-independent interfaces and reusable
+
+![SOA](./soa.jpg)

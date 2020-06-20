@@ -6,8 +6,14 @@ namespace TestService
     public class Country
     {
         [DataMember]
-        public int CountryId { get; set; }
+        public string CountryId { get; set; }
         [DataMember]
         public string CountryName { get; set; }
+
+        public Country(string countryId, string countryName)
+        {
+            CountryId = countryId;
+            CountryName = countryName;
+        }
     }
 }

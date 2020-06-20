@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -61,9 +62,28 @@ namespace TestService
 
         public List<Country> GetAllCountries()
         {
-            
-            // db땡겨오는거 가능하다
-            return null;
+            string ip = "127.0.0.1";
+            string port = "3306";
+            string uid = "root";
+            string password = "bkt8a9c0ak";
+            string database = "wcf_test";
+            string strConn = $"Server={ip};Port={port};Database={database};Uid={uid};Pwd={password};";
+               
+            MySqlConnection conn = new MySqlConnection(strConn);
+            conn.Open();
+
+            string quary = "select * from contries";
+            MySqlCommand command = new MySqlCommand(quary, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+
+
+            var contires = new List<Country>();
+            while (reader.Read())
+            {
+                contires.Add(new Country(reader["id"].ToString(), reader["name"].ToString()));
+            }
+            conn.Close(); // 사용이 끝나면 닫아주자.
+            return contires;
         }
     }
 }
