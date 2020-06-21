@@ -78,6 +78,13 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
   - 사용법
     1. Adding dlls
     2. Adding references
+    3. Create the ServiceHost
+    4. Adding an End-Point(코드에서 적거나 설정(Web.config)에서)
+    5. Enalbe service metadata behavior
+    6. Open service(Start listening for clients)
+    7. Close service(Stop listening for clients)
+
+
 ## 2. Managed Windows Service
 
 ## 3. Internet Information Services(IIS)
