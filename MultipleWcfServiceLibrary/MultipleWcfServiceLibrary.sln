@@ -7,6 +7,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleWcfServiceLibrary",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleServiceHost", "MultipleServiceHost\MultipleServiceHost.csproj", "{FB32E5B8-F492-4E3E-A376-B290E17CFA75}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MultipleServiceClient", "MultipleServiceClient\", "{2B8B1D70-A835-4423-B799-52ED92B04ED1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_8180"
+		Debug.AspNetCompiler.PhysicalPath = "MultipleServiceClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8180\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_8180"
+		Release.AspNetCompiler.PhysicalPath = "MultipleServiceClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8180\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8180"
+		SlnRelativePath = "MultipleServiceClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{FB32E5B8-F492-4E3E-A376-B290E17CFA75} = {FB32E5B8-F492-4E3E-A376-B290E17CFA75}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +46,10 @@ Global
 		{FB32E5B8-F492-4E3E-A376-B290E17CFA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB32E5B8-F492-4E3E-A376-B290E17CFA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB32E5B8-F492-4E3E-A376-B290E17CFA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8B1D70-A835-4423-B799-52ED92B04ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8B1D70-A835-4423-B799-52ED92B04ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8B1D70-A835-4423-B799-52ED92B04ED1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8B1D70-A835-4423-B799-52ED92B04ED1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
