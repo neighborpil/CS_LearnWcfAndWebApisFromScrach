@@ -65,13 +65,13 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
 # Hosting options
  - WCF를 hosting 할 수 있는 방법은 4가지이다.
 
-1. Self-Hosting in a Managed Application
+## 1. Self-Hosting in a Managed Application
   - 아래의 3가지 방법 중 하나를 사용하여 c#코드를 작성하는 것을 의미
     - Console Application
     - Windows Form Application
     - WPF Application
-2. Managed Windows Service
+## 2. Managed Windows Service
 
-3. Internet Information Services(IIS)
+## 3. Internet Information Services(IIS)
 
-4. Windows Process Activation Service(WAS)
+## 4. Windows Process Activation Service(WAS)
