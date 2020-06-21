@@ -70,6 +70,14 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
     - Console Application
     - Windows Form Application
     - WPF Application
+  - To manage the host life cycle i.e., creating and opening an instance of the **ServiceHost** class to make the service available and closing the instance after use.
+    - 호스팅을 할 때 생성 오픈 종료 등의 동작을 수동으로 해야한다.(IIS같은 경우는 자동으로 해준다)
+  - 개발 단계에서 사용. 데이터를 트레이싱 하기 쉽고, 어플리케이션 내부에서 어떤 일이 일어나는지 알 수 있다. 따라서 Debuging이 쉽다.(디버깅 용도?)
+  - 개발시 콘솔에서 하고 Windows Services로 넘어감
+  - Protocol : http, net.tcp, net.pipe, net.msmq
+  - 사용법
+    1. Adding dlls
+    2. Adding references
 ## 2. Managed Windows Service
 
 ## 3. Internet Information Services(IIS)
