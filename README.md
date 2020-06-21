@@ -46,6 +46,7 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
  - C stands for Contract(Interfaces and Methods)
  - Server side의 abc와 Client side의 abc가 일치해야 한다
 
+```
     // Server side
     <service name="MultipleWcfServiceLibrary.MultipleService" behaviorConfiguration="MyServiceTypeBehaviors">
         <endpoint 
@@ -59,12 +60,16 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
         address="http://localhost:11987/MyMultipleServiceHost.svc"
         binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IMultipleService"
         contract="MultipleServiceReference.IMultipleService" name="BasicHttpBinding_IMultipleService" />
+```
 -------------
-#Hosting options
+# Hosting options
  - WCF를 hosting 할 수 있는 방법은 4가지이다.
 
 1. Self-Hosting in a Managed Application
-
+  - 아래의 3가지 방법 중 하나를 사용하여 c#코드를 작성하는 것을 의미
+    - Console Application
+    - Windows Form Application
+    - WPF Application
 2. Managed Windows Service
 
 3. Internet Information Services(IIS)
