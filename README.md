@@ -83,7 +83,11 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
     5. Enalbe service metadata behavior
     6. Open service(Start listening for clients)
     7. Close service(Stop listening for clients)
+ - MEX Endpoint(Metadata Exchange)
 
+ - svcutil의 기능
+   - Proxy Class를 만든다
+   - Microsoft Visual Studio Command Prompt를 관리자 권한으로 실행하고 svcutil net.tcp://localhost:50011/mex /out:"D:MyProxy.cs" /config:"D:MyProxy.config"를 하면 프록시 클래스를 볼 수 있다
 
 ## 2. Managed Windows Service
 

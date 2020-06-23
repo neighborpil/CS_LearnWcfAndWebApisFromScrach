@@ -17,7 +17,7 @@ namespace ConsoleApp1
             //Uri httpBaseAddress = new Uri("http://localhost:50010");
             Uri httpBaseAddress = new Uri("http://localhost:50010/MyHttpEndPoint");
             Uri tcpBaseAddress = new Uri("net.tcp://localhost:50011");
-            var serviceHost = new ServiceHost(typeof(MultipleService), new Uri[]{ tcpBaseAddress , httpBaseAddress});
+            var serviceHost = new ServiceHost(typeof(MultipleService), new Uri[] { tcpBaseAddress, httpBaseAddress });
 
             // 파라미터(CBA순이다. Contract, Binding, Address)
             //var serviceEndpoint =
@@ -28,20 +28,19 @@ namespace ConsoleApp1
                 serviceHost.AddServiceEndpoint(typeof(IMultipleService), new BasicHttpBinding(), httpBaseAddress);
 
             // 만약 binding을 등록하지 않으면 BasicHttpBinding이 된다
-
+             
             /*
             var serviceMetadataBehavior = new ServiceMetadataBehavior();
             serviceMetadataBehavior.HttpGetEnabled = true; // true : Human readable format, false: Machine readable format
             serviceHost.Description.Behaviors.Add(serviceMetadataBehavior);
             */
             // 만약 httpGetEnabled가 false일 경우
-            var serviceMetadataBehavior = new ServiceMetadataBehavior();
-            serviceMetadataBehavior.HttpGetEnabled = false; // true : Human readable format, false: Machine readable format
-            serviceHost.Description.Behaviors.Add(serviceMetadataBehavior);
+            //var serviceMetadataBehavior = new ServiceMetadataBehavior();
+            //serviceMetadataBehavior.HttpGetEnabled = false; // true : Human readable format, false: Machine readable format
+            //serviceHost.Description.Behaviors.Add(serviceMetadataBehavior);
 
             var httpServiceEndpointMex = serviceHost.AddServiceEndpoint(typeof(IMetadataExchange),
                 MetadataExchangeBindings.CreateMexHttpBinding(), "http://localhost:50010/MyHttpEndPoint/mex");
-
 
             var tcpServiceEndpointMex = serviceHost.AddServiceEndpoint(typeof(IMetadataExchange),
                 MetadataExchangeBindings.CreateMexTcpBinding(), "net.tcp://localhost:50011/mex");
