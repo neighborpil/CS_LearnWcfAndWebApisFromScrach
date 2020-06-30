@@ -104,6 +104,8 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
      - 설치해야 함
   - Protocol : http, net.tcp, net.pipe, net.msmq
 
+ - how to do
+ ![managed_windows_service_implementation](./managed_windows_service_implementation.jpg)
 
 ## 3. Internet Information Services(IIS)
 
