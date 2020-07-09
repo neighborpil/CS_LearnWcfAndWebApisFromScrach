@@ -121,3 +121,20 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
  3. 응용 프로그램 개발 기능
  4. ASP.NET 4.8
  5. 윈도우 검색창에서 inetmgr 치면 ISS 관리 패널 나옴
+
+
+# Binding
+ - 접속에 대한 세부 설정
+ - App.config -> 우클릭 -> Edit WCF Configuration을 통하여 수정 간으
+ - 코드에서도 수정 가능
+
+# Contract
+ - 클라이언트가 service에서 무엇을 할 수 있는 가를 나타냄, capability or feature set
+ - 메시지 포맷 설정 가능 : json , xml등
+ - Type of contract
+   - Service contract : 클라이언트가 service에서 무엇을 할 수 있는 가
+   - Data contract : 어떤 데이터를 주고 받을지를 결정
+   - Fault contract : 에러, 얘외 핸들링
+   - Message contract : 메시지 포맷을 정하여 이기종(interoperability)간의 통신가능하게 함, 거의 사용 X
+
+    
