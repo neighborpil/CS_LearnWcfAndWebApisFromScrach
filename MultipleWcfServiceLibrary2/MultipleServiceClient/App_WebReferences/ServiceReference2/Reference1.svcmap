@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8544824c-03e0-4d25-a2b8-1240e9bb0ee3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8110/WcfClientPage/MyServiceOnIIS.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MultipleService.wsdl" MetadataType="Wsdl" ID="b9954b70-3b5f-4ae7-a4e6-64338afb3dea" SourceId="1" SourceUrl="http://localhost:8110/WcfClientPage/MyServiceOnIIS.svc?wsdl" />
+    <MetadataFile FileName="MyServiceOnIIS.xsd" MetadataType="Schema" ID="4a62efb6-2fcb-47a8-bf17-7c05bdcb434b" SourceId="1" SourceUrl="http://localhost:8110/WcfClientPage/MyServiceOnIIS.svc?xsd=xsd0" />
+    <MetadataFile FileName="MyServiceOnIIS1.xsd" MetadataType="Schema" ID="45b95061-e0a9-4d34-affd-0b435755811b" SourceId="1" SourceUrl="http://localhost:8110/WcfClientPage/MyServiceOnIIS.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

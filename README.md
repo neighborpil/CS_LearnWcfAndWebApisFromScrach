@@ -110,3 +110,14 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
 ## 3. Internet Information Services(IIS)
 
 ## 4. Windows Process Activation Service(WAS)
+ - new process activation service that is generalization of IIS features that work with non-HTTP transport protocols
+ - Such as Tcp, named pipes, and Message Queuing
+ - 요약하자면 IIS(IIS 7 이상)에서 동작하는 non-HTTP binding을 위한 WCF services 이다.
+
+
+# IIS 설치
+ 1. 윈도우즈 기능 켜고 끄기
+ 2. 인터넷 정보 서비스
+ 3. 응용 프로그램 개발 기능
+ 4. ASP.NET 4.8
+ 5. 윈도우 검색창에서 inetmgr 치면 ISS 관리 패널 나옴
