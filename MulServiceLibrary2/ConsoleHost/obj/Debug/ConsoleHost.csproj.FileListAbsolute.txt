@@ -1,0 +1,11 @@
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\ConsoleHost.exe.config
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\ConsoleHost.exe
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\ConsoleHost.pdb
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\MulServiceLibrary2.dll
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\MulServiceLibrary2.pdb
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\bin\Debug\MulServiceLibrary2.dll.config
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\obj\Debug\ConsoleHost.csprojAssemblyReference.cache
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\obj\Debug\ConsoleHost.csproj.CoreCompileInputs.cache
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\obj\Debug\ConsoleHost.csproj.CopyComplete
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\obj\Debug\ConsoleHost.exe
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\MulServiceLibrary2\ConsoleHost\obj\Debug\ConsoleHost.pdb
