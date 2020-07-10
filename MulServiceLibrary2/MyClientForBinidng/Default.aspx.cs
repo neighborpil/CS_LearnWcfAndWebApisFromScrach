@@ -12,11 +12,15 @@ public partial class _Default : System.Web.UI.Page
     {
         // 파라미터에 Web.config파일 내의 binding name을 적어줘야 한다.
         var serviceClient = new MultiplicationServiceClient("BasicHttpBinding_MultiplicationService");
-        Response.Write(serviceClient.Multiply(70, 80).ToString());
+        Response.Write(serviceClient.Mul(70, 80).ToString());
 
         Response.Write("<br>");
 
         var tcpServiceClient = new MultiplicationServiceClient("NetTcpBinding_MultiplicationService");
-        Response.Write(tcpServiceClient.Multiply(3, 4));
+        Response.Write(tcpServiceClient.Mul(3, 4));
+
+        Response.Write("<br>");
+
+        Response.Write(serviceClient.Add(1, 3));
     }
 }

@@ -35,23 +35,42 @@
       <xsd:import schemaLocation="http://localhost:50010/MyHttpEndPoint?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="MultiplicationService_Multiply_InputMessage">
-    <wsdl:part name="parameters" element="tns:Multiply" />
+  <wsdl:message name="MultiplicationService_Mul_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mul" />
   </wsdl:message>
-  <wsdl:message name="MultiplicationService_Multiply_OutputMessage">
-    <wsdl:part name="parameters" element="tns:MultiplyResponse" />
+  <wsdl:message name="MultiplicationService_Mul_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MulResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicationService_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicationService_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
   </wsdl:message>
   <wsdl:portType name="MultiplicationService">
-    <wsdl:operation name="Multiply">
-      <wsdl:input wsaw:Action="http://tempuri.org/MultiplicationService/Multiply" message="tns:MultiplicationService_Multiply_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/MultiplicationService/MultiplyResponse" message="tns:MultiplicationService_Multiply_OutputMessage" />
+    <wsdl:operation name="Mul">
+      <wsdl:input wsaw:Action="http://tempuri.org/MultiplicationService/Mul" message="tns:MultiplicationService_Mul_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/MultiplicationService/MulResponse" message="tns:MultiplicationService_Mul_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/MultiplicationService/Add" message="tns:MultiplicationService_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/MultiplicationService/AddResponse" message="tns:MultiplicationService_Add_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_MultiplicationService" type="tns:MultiplicationService">
     <wsp:PolicyReference URI="#NetTcpBinding_MultiplicationService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="Multiply">
-      <soap12:operation soapAction="http://tempuri.org/MultiplicationService/Multiply" style="document" />
+    <wsdl:operation name="Mul">
+      <soap12:operation soapAction="http://tempuri.org/MultiplicationService/Mul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/MultiplicationService/Add" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -62,8 +81,17 @@
   </wsdl:binding>
   <wsdl:binding name="BasicHttpBinding_MultiplicationService" type="tns:MultiplicationService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Multiply">
-      <soap:operation soapAction="http://tempuri.org/MultiplicationService/Multiply" style="document" />
+    <wsdl:operation name="Mul">
+      <soap:operation soapAction="http://tempuri.org/MultiplicationService/Mul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/MultiplicationService/Add" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
