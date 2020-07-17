@@ -20,8 +20,11 @@ namespace ConsoleHost
             var basicHttpBinding = new BasicHttpBinding();
             basicHttpBinding.OpenTimeout = new TimeSpan(0, 10, 0);
 
+            //var serviceEndpoint =
+            //    serviceHost.AddServiceEndpoint(typeof(IMulService), basicHttpBinding, httpBaseAddress);
+
             var serviceEndpoint =
-                serviceHost.AddServiceEndpoint(typeof(IMulService), basicHttpBinding, httpBaseAddress);
+                serviceHost.AddServiceEndpoint(typeof(INewMulService), basicHttpBinding, httpBaseAddress);
 
             var serviceMetadataBehavior = new ServiceMetadataBehavior();
             serviceMetadataBehavior.HttpGetEnabled = true;

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace MulServiceLibrary2
 {
-    [ServiceContract(Name="MultiplicationService")]
+    //[ServiceContract(Name="MultiplicationService")]
+    [ServiceContract]
     public interface IMulService
     {
         /*
@@ -32,14 +33,25 @@ namespace MulServiceLibrary2
          * int Add(int a, int b);
          * 새로운 함수를 추가할 경우 정상 동작
          */
+        //[OperationContract(Name ="MulInt")]
         [OperationContract]
-        int Mul(int a, int b);
+        int MulInt(int a, int b);
 
         //// Name을 쓰는 이유는 오버로딩에서 유용하기 때문
         //[OperationContract(Name = "Multiply")]
         //int Mul(int a, int b);
 
+        //[OperationContract(Name = "MulDouble")]
+        //double Mul(double a, double b);
+    }
+
+    //[ServiceContract(Name = "NewMultiplicationService")]
+    [ServiceContract]
+    public interface INewMulService : IMulService
+    {
+        //[OperationContract(Name = "MulDouble")]
         [OperationContract]
-        int Add(int a, int b);
+        double MulDouble(double a, double b);
     }
 }
+ 

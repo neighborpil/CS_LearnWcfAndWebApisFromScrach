@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Mul">
+  <xs:element name="MulInt">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="a" type="xs:int" />
@@ -8,25 +8,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="MulResponse">
+  <xs:element name="MulIntResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="MulResult" type="xs:int" />
+        <xs:element minOccurs="0" name="MulIntResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Add">
+  <xs:element name="MulDouble">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="a" type="xs:int" />
-        <xs:element minOccurs="0" name="b" type="xs:int" />
+        <xs:element minOccurs="0" name="a" type="xs:double" />
+        <xs:element minOccurs="0" name="b" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddResponse">
+  <xs:element name="MulDoubleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AddResult" type="xs:int" />
+        <xs:element minOccurs="0" name="MulDoubleResult" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

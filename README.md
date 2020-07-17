@@ -136,5 +136,10 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
    - Data contract : 어떤 데이터를 주고 받을지를 결정
    - Fault contract : 에러, 얘외 핸들링
    - Message contract : 메시지 포맷을 정하여 이기종(interoperability)간의 통신가능하게 함, 거의 사용 X
+ - 서비스 상속 가능
 
-    
+# Service Client Proxy?
+ - 서비스 라이브러리에서 ServiceContract와 OperationContract의 Name을 바꾸는 것
+ - 서비스에서는 오버로딩을 지원하지 않기 때문에 이를 통하여 메서드 이름을 바꾸어 서비스 한다.
+ - [ServiceContract(Name="MultiplicationService")]
+ - [OperationContract(Name ="MulInt")]
