@@ -143,3 +143,8 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
  - 서비스에서는 오버로딩을 지원하지 않기 때문에 이를 통하여 메서드 이름을 바꾸어 서비스 한다.
  - [ServiceContract(Name="MultiplicationService")]
  - [OperationContract(Name ="MulInt")]
+
+# Data Contract
+ - 기본 자료형(int, double, ...)은 자동으로 Serialization 되고 Deserialization된다.
+ - 하지만 Array 등의 객체는 자동으로 변경되지 않기 때문에 정의가 필요하다.
+ - 이 정의를 해주는 것이 Data Contract이다.

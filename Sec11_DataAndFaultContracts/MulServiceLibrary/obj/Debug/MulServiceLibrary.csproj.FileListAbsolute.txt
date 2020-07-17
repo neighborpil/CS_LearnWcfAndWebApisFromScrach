@@ -1,0 +1,6 @@
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\bin\Debug\MulServiceLibrary.dll.config
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\bin\Debug\MulServiceLibrary.dll
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\bin\Debug\MulServiceLibrary.pdb
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\obj\Debug\MulServiceLibrary.csproj.CoreCompileInputs.cache
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\obj\Debug\MulServiceLibrary.dll
+D:\Work\GitRepository\CS_LearnWcfAndWebApisFromScrach\Sec11_DataAndFaultContracts\MulServiceLibrary\obj\Debug\MulServiceLibrary.pdb
