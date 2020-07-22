@@ -3,8 +3,15 @@
   <xs:complexType name="Student">
     <xs:sequence>
       <xs:element minOccurs="0" name="StudentId" type="xs:int" />
-      <xs:element minOccurs="0" name="StudentName" nillable="true" type="xs:string" />
+      <xs:element name="StudentName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Student" nillable="true" type="tns:Student" />
+  <xs:complexType name="DivFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DivFault" nillable="true" type="tns:DivFault" />
 </xs:schema>

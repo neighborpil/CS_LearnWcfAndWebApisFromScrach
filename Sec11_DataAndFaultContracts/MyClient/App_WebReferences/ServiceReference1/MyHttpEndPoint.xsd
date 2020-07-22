@@ -28,4 +28,34 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="DivInt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="a" type="xs:int" />
+        <xs:element minOccurs="0" name="b" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DivIntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DivIntResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DivInt2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="a" type="xs:int" />
+        <xs:element minOccurs="0" name="b" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DivInt2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DivInt2Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -48,6 +48,21 @@
   <wsdl:message name="IMulService_Save_OutputMessage">
     <wsdl:part name="parameters" element="tns:SaveResponse" />
   </wsdl:message>
+  <wsdl:message name="IMulService_DivInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:DivInt" />
+  </wsdl:message>
+  <wsdl:message name="IMulService_DivInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMulService_DivInt2_InputMessage">
+    <wsdl:part name="parameters" element="tns:DivInt2" />
+  </wsdl:message>
+  <wsdl:message name="IMulService_DivInt2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivInt2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMulService_DivInt2_DivFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/MulServiceLibrary" name="detail" element="q1:DivFault" />
+  </wsdl:message>
   <wsdl:portType name="IMulService">
     <wsdl:operation name="MulInt">
       <wsdl:input wsaw:Action="http://tempuri.org/IMulService/MulInt" message="tns:IMulService_MulInt_InputMessage" />
@@ -56,6 +71,15 @@
     <wsdl:operation name="Save">
       <wsdl:input wsaw:Action="http://tempuri.org/IMulService/Save" message="tns:IMulService_Save_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMulService/SaveResponse" message="tns:IMulService_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DivInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMulService/DivInt" message="tns:IMulService_DivInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMulService/DivIntResponse" message="tns:IMulService_DivInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DivInt2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMulService/DivInt2" message="tns:IMulService_DivInt2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMulService/DivInt2Response" message="tns:IMulService_DivInt2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMulService/DivInt2DivFaultFault" name="DivFaultFault" message="tns:IMulService_DivInt2_DivFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IMulService" type="tns:IMulService">
@@ -79,6 +103,27 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DivInt">
+      <soap12:operation soapAction="http://tempuri.org/IMulService/DivInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivInt2">
+      <soap12:operation soapAction="http://tempuri.org/IMulService/DivInt2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DivFaultFault">
+        <soap12:fault use="literal" name="DivFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpBinding_IMulService" type="tns:IMulService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -99,6 +144,27 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivInt">
+      <soap:operation soapAction="http://tempuri.org/IMulService/DivInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivInt2">
+      <soap:operation soapAction="http://tempuri.org/IMulService/DivInt2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DivFaultFault">
+        <soap:fault use="literal" name="DivFaultFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="MulService">
