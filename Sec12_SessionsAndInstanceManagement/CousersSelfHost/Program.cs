@@ -14,16 +14,17 @@ namespace CousersSelfHost
         static void Main(string[] args)
         {
             Uri tcpBaseAddress = new Uri("net.tcp://localhost:50001");
-            Uri httpBaseAddress = new Uri("http://localhost:50002");
+            //Uri httpBaseAddress = new Uri("http://localhost:50002"); // BasicHttpBinding은 Session을 지원하지 않기 때문에 SessionMode를 사용하기 위해 삭제
 
-            var serviceHost = new ServiceHost(typeof(Courses), new Uri[] {tcpBaseAddress, httpBaseAddress});
+            //var serviceHost = new ServiceHost(typeof(Courses), new Uri[] {tcpBaseAddress, httpBaseAddress});
+            var serviceHost = new ServiceHost(typeof(Courses), tcpBaseAddress);
 
             var tcpBinding = new NetTcpBinding();
             tcpBinding.ReceiveTimeout = new TimeSpan(0, 1, 0);
 
             var tcpServiceEndpoint = serviceHost.AddServiceEndpoint(typeof(ICourses), tcpBinding, tcpBaseAddress);
-            var httpServiceEndpoint =
-                serviceHost.AddServiceEndpoint(typeof(ICourses), new BasicHttpBinding(), httpBaseAddress);
+            //var httpServiceEndpoint =
+            //    serviceHost.AddServiceEndpoint(typeof(ICourses), new BasicHttpBinding(), httpBaseAddress);
 
             var serviceMetadataBehavior = new ServiceMetadataBehavior();
             serviceHost.Description.Behaviors.Add(serviceMetadataBehavior);

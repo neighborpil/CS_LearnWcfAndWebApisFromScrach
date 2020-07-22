@@ -14,13 +14,13 @@ namespace CourseServiceLibrary
         public string CourseName { get; set; }
     }
 
-    [ServiceContract]
+    [ServiceContract(SessionMode = SessionMode.Required)]
     public interface ICourses
     {
-        [OperationContract]
+        [OperationContract(IsInitiating = true)]
         void AddToCourse(Course course);
 
-        [OperationContract]
+        [OperationContract(IsTerminating = true)]
         List<Course> ListCourse();
     }
 }
