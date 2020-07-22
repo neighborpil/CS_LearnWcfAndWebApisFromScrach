@@ -17,10 +17,10 @@ namespace CourseServiceLibrary
     [ServiceContract]
     public interface ICourses
     {
-        [OperationContract(IsInitiating = true)]
+        [OperationContract]
         void AddToCourse(Course course);
 
-        [OperationContract(IsTerminating = true)]
+        [OperationContract]
         List<Course> ListCourse();
     }
 }

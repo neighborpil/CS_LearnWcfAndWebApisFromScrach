@@ -148,3 +148,29 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
  - 기본 자료형(int, double, ...)은 자동으로 Serialization 되고 Deserialization된다.
  - 하지만 Array 등의 객체는 자동으로 변경되지 않기 때문에 정의가 필요하다.
  - 이 정의를 해주는 것이 Data Contract이다.
+
+# Falut 
+ - WCF에서는 Exception을 Falult라 한다.
+ - WCF에서는 보안상의 이유로 Exception을 표시하지 않는다
+ - 하지만 개발 도중에는 표시하는 것이 개발의 편의성 면에서 좋으므로 옵션으로 변경 할 수 있다
+
+ 1. Configuration에서 옵션변경
+  - App.config 파일에서 behavior에 IncludeExceptionDetailInFaults 옵션을 주거나
+  - Service Library의 Service 클래스에 [ServiceBehavior(IncludeExceptionDetailInFaults=true]를 붙이면 된다
+  - .Net의 Exception을 사용하지 않고 WCF의 FalutException class를 사용하면 표시된다
+  - FalutException<T>
+
+# Session
+ - single logig으로 움직이는 서비스가 있고
+ - mulpiple session으로 움직이는 서비스도 있다
+ - session을 지원하는 경우, 각각의 service 호출시 데이터가 기억된다.
+   하지만 session을 지원하지 않는 경우, 각각 개별 호출로 인식된다.
+ 1. Bindings that support sessions by default
+  - NetTcpBinding
+  - NetNamedPipeBinding
+  - WSDualHttpBinding
+ 2. Binding that do not support sessions at all
+  - BasicHttpBinding
+  - NetPeerTcpBinding
+  - NetMSMQBinding
+
