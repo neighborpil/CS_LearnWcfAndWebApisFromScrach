@@ -174,3 +174,20 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
   - NetPeerTcpBinding
   - NetMSMQBinding
 
+# Instance Management
+ - client로부터 호출이 오면 server는 WCF인스턴스를 만든다
+ - WCF는 3가지 방법으로 인스턴스를 만든다
+  - Per call(One for each call from any client)
+   - least memory useage?
+   - [ServiceBehavior(InstanceContextMode = InstanceContextMode.Percall)]
+  - Per session(One for each client)
+     - [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
+  - Single instance(Only one for all)
+     - [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+
+# Control Sessions
+ - 세션을 유지하기 위하여 설정이 필요하다
+ - ReceivedTimeOut
+ - IsInitiating : Service Interface의 Method에 설정
+ - IsTerminating : Service Interface의 Method에 설정
+ - SessionMode : Service에서 설정
