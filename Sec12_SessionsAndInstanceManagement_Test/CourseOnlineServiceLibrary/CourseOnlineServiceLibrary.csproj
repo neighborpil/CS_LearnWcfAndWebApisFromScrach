@@ -44,21 +44,6 @@
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SQLite-net, Version=1.7.335.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\sqlite-net-pcl.1.7.335\lib\netstandard2.0\SQLite-net.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.0.3.851, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.3\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.core, Version=2.0.3.851, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
-      <HintPath>..\packages\SQLitePCLRaw.core.2.0.3\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.nativelibrary, Version=2.0.3.851, Culture=neutral, PublicKeyToken=502ed628492ab262, processorArchitecture=MSIL">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.3\lib\net461\SQLitePCLRaw.nativelibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.0.3.851, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
-      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.3\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -66,6 +51,18 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
@@ -89,6 +86,41 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\northwindEF.db" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.dll.config" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.db" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.exe.config" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.exe.config" />
+    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\Installer.exe" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\Installer.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.dll" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.xml" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Interop.dll" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Interop.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.dll" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.dll" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.xml" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.dll" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.xml" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.xml" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.exe" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.exe" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.pdb" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.exe" />
+    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.pdb" />
+    <Content Include="SQLite.Interop.dll" />
+    <Content Include="SQLite.Interop.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -112,10 +144,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
-  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
