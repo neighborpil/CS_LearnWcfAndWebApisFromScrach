@@ -14,6 +14,5 @@ namespace CoursesOnlineSelfHost
             var online = new CoursesOnline();
             online.CreateTable();
         }
-
     }
 }

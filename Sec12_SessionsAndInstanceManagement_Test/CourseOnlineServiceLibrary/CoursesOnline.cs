@@ -9,7 +9,7 @@ namespace CourseOnlineServiceLibrary
 {
     public class CoursesOnline : ICoursesOnline
     {
-        //private readonly string _dbFile = Path.Combine(Environment.CurrentDirectory, "CoursesOnline.sqlite");
+        private readonly string _dbFile = Path.Combine(Environment.CurrentDirectory, "CoursesOnline.db");
 
         private Course course = null;
         private List<Course> courses = null;
@@ -23,7 +23,7 @@ namespace CourseOnlineServiceLibrary
 
         public void CreateTable()
         {
-            using (var connection = new SQLiteConnection($"Data Source={$"D:\test.sqlite"}"))
+            using (var connection = new SQLiteConnection($"Data Source={_dbFile}"))
             {
 
                 try
@@ -31,7 +31,7 @@ namespace CourseOnlineServiceLibrary
                     connection.Open();
 
                     var sql =
-                        "create table course(course_id int primary key auto_increment, course_name varchar(50), course_price double)";
+                        "create table if not exists course(course_id integer primary key , course_name text, course_price real)";
                     var command = new SQLiteCommand(sql, connection);
                     command.ExecuteNonQuery();
                 }
@@ -43,31 +43,26 @@ namespace CourseOnlineServiceLibrary
 
         }
 
-        //public void CreateTable()
-        //{
-        //    var dbFile = new FileInfo(_dbFile);
-        //    if (!dbFile.Exists)
-        //    {
-        //        try
-        //        {
-        //            using (var connection = new SQLiteConnection(_dbFile))
-        //            {
-        //                string query =
-        //                    "create table course(course_id int primary key auto_increment, course_name varchar(50), course_price double)";
+        public void InsertData(int courseId, string courseName, double coursePrice)
+        {
+            using (var connection = new SQLiteConnection($"Data Source={_dbFile}"))
+            {
 
-        //                var result = connection.CreateTable<Course>();
-        //                if(result == CreateTableResult.Created)
-        //                {
+                try
+                {
+                    connection.Open();
 
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine(ex.Message);
-        //        }
-        //    }
-        //}
+                    var sql =
+                        $"Insert into course values({courseId}, '{courseName}', {coursePrice}";
+                    var command = new SQLiteCommand(sql, connection);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
 
 
         public List<Course> ListCourses()

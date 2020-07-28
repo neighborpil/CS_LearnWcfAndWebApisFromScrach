@@ -84,7 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\northwindEF.db" />
     <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.dll.config" />
@@ -116,8 +118,6 @@
     <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.pdb" />
     <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.exe" />
     <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.pdb" />
-    <Content Include="SQLite.Interop.dll" />
-    <Content Include="SQLite.Interop.pdb" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
