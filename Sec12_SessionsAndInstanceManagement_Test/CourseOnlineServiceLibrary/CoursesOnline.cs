@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Diagnostics.Eventing.Reader;
 using System.IO;
+using System.ServiceModel;
 
 namespace CourseOnlineServiceLibrary
 {
@@ -17,81 +18,77 @@ namespace CourseOnlineServiceLibrary
 
         public CoursesOnline()
         {
-            //CreateTable();
-        }
-
-
-        public void CreateTable()
-        {
-            using (var connection = new SQLiteConnection($"Data Source={_dbFile}"))
-            {
-
-                try
-                {
-                    connection.Open();
-
-                    var sql =
-                        "create table if not exists course(course_id integer primary key , course_name text, course_price real)";
-                    var command = new SQLiteCommand(sql, connection);
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-
-        }
-
-        public void InsertData(int courseId, string courseName, double coursePrice)
-        {
-            using (var connection = new SQLiteConnection($"Data Source={_dbFile}"))
-            {
-
-                try
-                {
-                    connection.Open();
-
-                    var sql =
-                        $"Insert into course values({courseId}, '{courseName}', {coursePrice}";
-                    var command = new SQLiteCommand(sql, connection);
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
         }
 
 
         public List<Course> ListCourses()
         {
-            //course = new List<Course>();
+            courses = new List<Course>();
 
-            //try
-            //{
-            //    using (var connection = new SQLiteConnection(_dbFile))
-            //    {
+            using (var connection = new SQLiteConnection(_dbFile))
+            {
 
-            //    }
-            //}
+                try
+                {
+                    connection.Open();
+
+                    string sql = string.Empty;
+                    sql = $"select * from course";
+                    var command = new SQLiteCommand(sql, connection);
+                    var dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        var courseId = Convert.ToInt32(dataReader["course_id"]);
+                        var courseName = dataReader["course_name"].ToString();
+                        var coursePrice = Convert.ToDouble(dataReader["course_price"]);
+                        var course = new Course(courseId, courseName, coursePrice);
+                        courses.Add(course);
+                    }
+
+                    return courses;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
             return null;
         }
 
         public void EmptyCoursesTaken()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                coursesTaken = new List<CourseTaken>();
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message);
+            }
         }
 
         public void AddToCoursesTaken(CourseTaken courseTaken)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                coursesTaken.Add(courseTaken);
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message);
+            }
         }
 
         public List<CourseTaken> ListCoursesTaken()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                return coursesTaken;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message);
+            }
         }
     }
 }

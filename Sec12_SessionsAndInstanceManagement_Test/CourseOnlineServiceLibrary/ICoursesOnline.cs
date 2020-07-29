@@ -15,6 +15,13 @@ namespace CourseOnlineServiceLibrary
 
         public double CoursePrice { get; set; }
 
+
+        public Course(int courseId, string courseName, double coursePrice)
+        {
+            CourseId = courseId;
+            CourseName = courseName;
+            CoursePrice = coursePrice;
+        }
     }
 
     [DataContract]

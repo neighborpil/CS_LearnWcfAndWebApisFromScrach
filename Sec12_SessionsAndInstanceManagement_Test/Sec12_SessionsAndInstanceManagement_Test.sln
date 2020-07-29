@@ -9,6 +9,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseOnlineServiceLibraryT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursesOnlineSelfHost", "CoursesOnlineSelfHost\CoursesOnlineSelfHost.csproj", "{C970A0F9-D384-47B5-93A0-7759843500B0}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CoursesOnlineClient", "CoursesOnlineClient\", "{993BD9B4-EE5E-434F-80D6-B9C41F659C52}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_17087"
+		Debug.AspNetCompiler.PhysicalPath = "CoursesOnlineClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17087\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_17087"
+		Release.AspNetCompiler.PhysicalPath = "CoursesOnlineClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17087\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "17087"
+		SlnRelativePath = "CoursesOnlineClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +49,10 @@ Global
 		{C970A0F9-D384-47B5-93A0-7759843500B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C970A0F9-D384-47B5-93A0-7759843500B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C970A0F9-D384-47B5-93A0-7759843500B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993BD9B4-EE5E-434F-80D6-B9C41F659C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993BD9B4-EE5E-434F-80D6-B9C41F659C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993BD9B4-EE5E-434F-80D6-B9C41F659C52}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{993BD9B4-EE5E-434F-80D6-B9C41F659C52}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

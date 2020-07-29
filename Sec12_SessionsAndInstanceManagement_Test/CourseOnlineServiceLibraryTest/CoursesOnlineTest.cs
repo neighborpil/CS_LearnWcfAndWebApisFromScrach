@@ -10,7 +10,6 @@ namespace CourseOnlineServiceLibraryTest
         public void CreateTable_JustRun_CreateSqlite3DbFile()
         {
             var coursesOnline = new CoursesOnline();
-            coursesOnline.CreateTable();
         }
     }
 }

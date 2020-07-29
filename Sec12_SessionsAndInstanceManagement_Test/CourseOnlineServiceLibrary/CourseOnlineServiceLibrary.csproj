@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoursesOnline.cs" />
+    <Compile Include="SqliteHelper.cs" />
     <Compile Include="ICoursesOnline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,36 +89,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\northwindEF.db" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.dll.config" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.db" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.exe.config" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.exe.config" />
-    <None Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.exe.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\Installer.exe" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\Installer.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.dll" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Designer.xml" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Interop.dll" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\SQLite.Interop.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.dll" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.dll" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.EF6.xml" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.dll" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.Linq.xml" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\System.Data.SQLite.xml" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.exe" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\test.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.exe" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testef6.pdb" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.exe" />
-    <Content Include="sqlite-netFx46-binary-x64-2015-1.0.113.0\testlinq.pdb" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
