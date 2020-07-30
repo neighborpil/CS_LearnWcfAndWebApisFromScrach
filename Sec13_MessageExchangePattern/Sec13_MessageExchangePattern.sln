@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternInWcf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternInWcfConsoleHost", "MessageExchangePatternInWcfConsoleHost\MessageExchangePatternInWcfConsoleHost.csproj", "{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteController", "SqliteController\SqliteController.csproj", "{F59C819A-A7B0-447C-9982-7977B8E0FFEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
