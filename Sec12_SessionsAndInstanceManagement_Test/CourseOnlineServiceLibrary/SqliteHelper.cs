@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 
@@ -24,7 +25,7 @@ namespace CourseOnlineServiceLibrary
                     connection.Open();
                     //var sql = "drop table course";
                     var sql =
-                        "create table if not exists course(course_id integer primary key autoincrement, course_name text, course_price real)";
+                        "create table course(course_id integer primary key autoincrement, course_name text, course_price real)";
                     var command = new SQLiteCommand(sql, connection);
                     command.ExecuteNonQuery();
 
@@ -74,8 +75,9 @@ namespace CourseOnlineServiceLibrary
         }
 
 
-        public void SelectData(int courseId = 0)
+        public List<Course> SelectData(int id = 0)
         {
+            List<Course> courses = new List<Course>();
             using (var connection = new SQLiteConnection($"Data Source={_dbFile}"))
             {
 
@@ -84,19 +86,24 @@ namespace CourseOnlineServiceLibrary
                     connection.Open();
 
                     string sql = string.Empty;
-                    if (courseId == 0)
+                    if (id == 0)
                     {
                         sql = "select * from course";
                     }
                     else
                     {
                         sql =
-                            $"select * from course where course_id = {courseId}";
+                            $"select * from course where course_id = {id}";
                     }
                     var command = new SQLiteCommand(sql, connection);
                     var dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
+                        var courseId = Convert.ToInt32(dataReader["course_id"]);
+                        var courseName = dataReader["course_name"].ToString();
+                        var coursePrice = Convert.ToDouble(dataReader["course_price"]);
+                        var course = new Course(courseId, courseName, coursePrice);
+                        courses.Add(course);
                         Console.WriteLine($"CourseId: {dataReader["course_id"]}, CourseName: {dataReader["course_name"]}, CoursePrice: {dataReader["course_price"]}");
                     }
                 }
@@ -105,9 +112,7 @@ namespace CourseOnlineServiceLibrary
                     Console.WriteLine(ex.Message);
                 }
             }
+            return courses;
         }
-
-
-
     }
 }

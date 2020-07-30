@@ -16,7 +16,7 @@ namespace CoursesOnlineSelfHost
             var sqliteHelper = new SqliteHelper();
             sqliteHelper.CreateTable();
 
-            var tcpBaseAddress = new Uri("net.tcp://localhost:50010/");
+            var tcpBaseAddress = new Uri("net.tcp://localhost:50001");
             var serviceHost = new ServiceHost(typeof(CoursesOnline), new Uri[] {tcpBaseAddress});
             var serviceEndpoint =
                 serviceHost.AddServiceEndpoint(typeof(ICoursesOnline), new NetTcpBinding(), tcpBaseAddress);
@@ -26,7 +26,7 @@ namespace CoursesOnlineSelfHost
 
             var tctServiceEndpointMex = serviceHost.AddServiceEndpoint(typeof(IMetadataExchange),
                 MetadataExchangeBindings.CreateMexTcpBinding(),
-                "net.tcp://localhost:/50010/mex");
+                "net.tcp://localhost:50001/mex");
 
             serviceHost.Open();
 

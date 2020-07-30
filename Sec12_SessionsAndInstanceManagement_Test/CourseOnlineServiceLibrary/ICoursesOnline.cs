@@ -13,6 +13,7 @@ namespace CourseOnlineServiceLibrary
         [DataMember]
         public string CourseName { get; set; }
 
+        [DataMember]
         public double CoursePrice { get; set; }
 
 
@@ -33,6 +34,7 @@ namespace CourseOnlineServiceLibrary
         [DataMember]
         public string CourseName { get; set; }
 
+        [DataMember]
         public double CoursePrice { get; set; }
     }
 

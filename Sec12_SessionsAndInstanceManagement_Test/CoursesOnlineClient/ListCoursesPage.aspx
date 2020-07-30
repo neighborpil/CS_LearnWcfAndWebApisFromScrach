@@ -11,9 +11,9 @@
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="btnNewOrder" runat="server" OnClick="btnNewOrder_Click" Text="NewOrder" />
-            <asp:Button ID="btnCheckOut" runat="server" Text="CheckOut" />
+            <asp:Button ID="btnCheckOut" runat="server" Text="CheckOut" OnClick="btnCheckOut_Click" />
             <br />
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gvCoursesList" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvCoursesList_SelectedIndexChanged" OnRowCancelingEdit="gvCoursesList_RowCancelingEdit">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:ButtonField CommandName="Cancel" Text="Select" />
@@ -30,7 +30,7 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             <br />
-            <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gvCoursesTaken" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDataBound="gvCoursesTaken_RowDataBound">
                 <AlternatingRowStyle BackColor="White" />
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

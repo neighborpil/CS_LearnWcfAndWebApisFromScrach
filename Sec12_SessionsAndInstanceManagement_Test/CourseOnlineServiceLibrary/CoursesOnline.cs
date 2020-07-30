@@ -16,43 +16,18 @@ namespace CourseOnlineServiceLibrary
         private List<Course> courses = null;
         private List<CourseTaken> coursesTaken = null;
 
+        private readonly SqliteHelper _sqliteHelper;
+
         public CoursesOnline()
         {
+            _sqliteHelper = new SqliteHelper();
+
         }
 
 
         public List<Course> ListCourses()
         {
-            courses = new List<Course>();
-
-            using (var connection = new SQLiteConnection(_dbFile))
-            {
-
-                try
-                {
-                    connection.Open();
-
-                    string sql = string.Empty;
-                    sql = $"select * from course";
-                    var command = new SQLiteCommand(sql, connection);
-                    var dataReader = command.ExecuteReader();
-                    while (dataReader.Read())
-                    {
-                        var courseId = Convert.ToInt32(dataReader["course_id"]);
-                        var courseName = dataReader["course_name"].ToString();
-                        var coursePrice = Convert.ToDouble(dataReader["course_price"]);
-                        var course = new Course(courseId, courseName, coursePrice);
-                        courses.Add(course);
-                    }
-
-                    return courses;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-            return null;
+            return _sqliteHelper.SelectData();
         }
 
         public void EmptyCoursesTaken()
