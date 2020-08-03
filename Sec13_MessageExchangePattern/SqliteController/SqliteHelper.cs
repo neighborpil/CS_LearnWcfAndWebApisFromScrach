@@ -60,6 +60,8 @@ namespace SqliteController
                 {
                     try
                     {
+                        connection.Open();
+
                         inserted = command.ExecuteNonQuery();
                     }
                     catch (Exception ex)

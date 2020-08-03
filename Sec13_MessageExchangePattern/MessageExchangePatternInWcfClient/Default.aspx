@@ -10,9 +10,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="btnSignUp" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:Button ID="btnSignUp" runat="server" Text="SignUp" OnClick="btnSignUp_Click" />
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server">

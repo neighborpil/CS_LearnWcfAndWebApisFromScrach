@@ -44,10 +44,6 @@
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SqliteController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\SqliteController.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -67,6 +63,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateUserRegistrationDB.cs" />
     <Compile Include="IMessageExchangePattern.cs" />
     <Compile Include="MessageExchangePattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqliteController.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SqliteController\SqliteController.csproj">
+      <Project>{f59c819a-a7b0-447c-9982-7977b8e0ffec}</Project>
+      <Name>SqliteController</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
