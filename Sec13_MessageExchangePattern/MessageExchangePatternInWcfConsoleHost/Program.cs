@@ -13,21 +13,17 @@ namespace MessageExchangePatternInWcfConsoleHost
     {
         static void Main(string[] args)
         {
-
-            new CreateUserRegistrationDB("UserRegistrationDB.db").CreateDB();
-
-
             var httpBaseAddress = new Uri("http://localhost:50010/");
 
             var serviceHost = new ServiceHost(typeof(MessageExchangePattern), new Uri[] {httpBaseAddress});
             var serviceEndpoint =
-                serviceHost.AddServiceEndpoint(typeof(IMessageExchangePattern), new BasicHttpBinding(), httpBaseAddress);
+                serviceHost.AddServiceEndpoint(typeof(IMessageExchangePattern), new WSDualHttpBinding(), httpBaseAddress);
 
             var serviceMetadataBehavior = new ServiceMetadataBehavior();
             serviceHost.Description.Behaviors.Add(serviceMetadataBehavior);
 
             var tcpServiceEndpointMex = serviceHost.AddServiceEndpoint(typeof(IMetadataExchange),
-                MetadataExchangeBindings.CreateMexTcpBinding(), "net.tcp://localhost:50010/mex");
+                MetadataExchangeBindings.CreateMexHttpBinding(), "http://localhost:50010/mex");
 
             serviceHost.Open();
 
