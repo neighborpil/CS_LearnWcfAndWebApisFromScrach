@@ -1,4 +1,8 @@
-﻿using SqliteController;
+﻿
+using System;
+using System.Data;
+using InterfaceLib.Database;
+using SqliteLib;
 
 namespace MessageExchangePatternInWcfLibrary
 {
@@ -14,12 +18,27 @@ namespace MessageExchangePatternInWcfLibrary
 
         public void CreateDB()
         {
-            var helper = new SqliteHelper(_dbFile);
+            var query = new SqliteQuery();
+            query.Type = QueryType.Create;
+            query.Table = "user_registration";
+            query.Value =
+                "user_id integer primary key autoincrement, user_email text, email_sent_flag text default 'y'";
 
-            var query =
-                "create table if not exists user_registration(user_id integer primary key autoincrement, user_email text, email_sent_flag text default 'y')";
-            helper.ExecuteNonQuery(query);
+            using (var database = new Sqlite(_dbFile))
+            {
+                database.SetData(query);
+            }
 
+            query = new SqliteQuery();
+            query.Type = QueryType.Select;
+            query.Table = "user_registration";
+            query.Value = "count(*)";
+
+            DataTable result = null;
+            using (var database = new Sqlite(_dbFile))
+            {
+                result = database.GetData(query);
+            }
         }
     }
 }

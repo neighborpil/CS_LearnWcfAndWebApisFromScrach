@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MessageExchangePatternInWcfClient", "MessageExchangePatternInWcfClient\", "{73DC8641-C3A7-47ED-B865-22F54557E271}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
-		ProjectReferences = "{f59c819a-a7b0-447c-9982-7977b8e0ffec}|SqliteController.dll;{9F40D48E-9E9A-44B4-8A79-8348F1523475}|MessageExchangePatternInWcfLibrary.dll;"
+		ProjectReferences = "{9F40D48E-9E9A-44B4-8A79-8348F1523475}|MessageExchangePatternInWcfLibrary.dll;{16689907-D7A7-4A61-8E43-D5CB4B5201AB}|InterfaceLib.dll;{8699BC82-00AF-4B1E-B413-97DB6B851C99}|SqliteLib.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_21735"
 		Debug.AspNetCompiler.PhysicalPath = "MessageExchangePatternInWcfClient\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_21735\"
@@ -30,7 +30,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternInWcf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExchangePatternInWcfConsoleHost", "MessageExchangePatternInWcfConsoleHost\MessageExchangePatternInWcfConsoleHost.csproj", "{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteController", "SqliteController\SqliteController.csproj", "{F59C819A-A7B0-447C-9982-7977B8E0FFEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteControllerTest", "SqliteControllerTest\SqliteControllerTest.csproj", "{71085572-3857-40D1-B26F-B813ADE3E3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteLib", "SqliteLib\SqliteLib.csproj", "{8699BC82-00AF-4B1E-B413-97DB6B851C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLib", "InterfaceLib\InterfaceLib.csproj", "{16689907-D7A7-4A61-8E43-D5CB4B5201AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +54,18 @@ Global
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613694F3-4155-4AD6-A1E1-546C8F5EEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F59C819A-A7B0-447C-9982-7977B8E0FFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71085572-3857-40D1-B26F-B813ADE3E3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71085572-3857-40D1-B26F-B813ADE3E3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71085572-3857-40D1-B26F-B813ADE3E3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71085572-3857-40D1-B26F-B813ADE3E3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8699BC82-00AF-4B1E-B413-97DB6B851C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8699BC82-00AF-4B1E-B413-97DB6B851C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8699BC82-00AF-4B1E-B413-97DB6B851C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8699BC82-00AF-4B1E-B413-97DB6B851C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16689907-D7A7-4A61-8E43-D5CB4B5201AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16689907-D7A7-4A61-8E43-D5CB4B5201AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16689907-D7A7-4A61-8E43-D5CB4B5201AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16689907-D7A7-4A61-8E43-D5CB4B5201AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

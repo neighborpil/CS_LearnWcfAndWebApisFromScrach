@@ -76,9 +76,13 @@
     <Content Include="SqliteController.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SqliteController\SqliteController.csproj">
-      <Project>{f59c819a-a7b0-447c-9982-7977b8e0ffec}</Project>
-      <Name>SqliteController</Name>
+    <ProjectReference Include="..\InterfaceLib\InterfaceLib.csproj">
+      <Project>{16689907-d7a7-4a61-8e43-d5cb4b5201ab}</Project>
+      <Name>InterfaceLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqliteLib\SqliteLib.csproj">
+      <Project>{8699bc82-00af-4b1e-b413-97db6b851c99}</Project>
+      <Name>SqliteLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

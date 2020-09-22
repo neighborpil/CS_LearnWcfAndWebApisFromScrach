@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Text;
@@ -13,6 +15,11 @@ namespace MessageExchangePatternInWcfConsoleHost
     {
         static void Main(string[] args)
         {
+            var path = $@"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/UserRegistrationDb.db";
+            var db = new CreateUserRegistrationDB(path);
+            db.CreateDB();
+
+
             var httpBaseAddress = new Uri("http://localhost:50010/");
 
             var serviceHost = new ServiceHost(typeof(MessageExchangePattern), new Uri[] {httpBaseAddress});
