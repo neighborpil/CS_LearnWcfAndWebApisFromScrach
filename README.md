@@ -196,7 +196,7 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
  1. Request / Reply pattern
   - 데이터를 쏘고 답변을 수신
   - default
-  - client는 메시지를 수신할 때까지 중지(기본)
+  - client는 응답 메시지를 수신할 때까지 중지(기본)
   - client는 비동기(asynchronously)적으로 동작 할지 선택 가능
  2. One-way / Simplex / Datagram
   - client에서 service로 데이터를 쏘기만 한다
@@ -204,3 +204,4 @@ Interface는 world에 노출되고, class에 구현한 것을 실행한다.
   - service가 죽어도 client는 알 수 없다
   - 기본적으로 모든 메소드가 void이다
  3. Duplex / Callback
+  - Invokes methods in turn
