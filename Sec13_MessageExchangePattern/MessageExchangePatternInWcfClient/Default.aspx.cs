@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MessageExchangePatternInWcfLibrary;
-using ServiceReference1;
-using SqliteController;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -20,23 +19,33 @@ public partial class _Default : System.Web.UI.Page
     {
 		try
 		{
-            var helper = new SqliteHelper(_dbFile);
-            var query = $"inset into user_registration(user_email) values('{txtEmail.Text}')";
-            var result = helper.ExecuteNonQuery(query);
+            var client =new MessageExchangePattern();
+            client.SendEmail(txtEmail.Text);
+            GridView1.DataBind();
 
-            if (result > 0)
-            {
-                var client = new MessageExchangePatternClient("WSDualHttpBinding_IMessageExchangePattern");
-                client.SendEmail(txtEmail.Text);
+            //var client = new MessageExchangePatternClient();
 
-                GridView1.DataBind();
-            }
-            else
-            {
-                ShowMessage("데이터베이스에 입력 할 수 없습니다.");
-            }
+
+
+
+
+            //var helper = new SqliteHelper(_dbFile);
+            //var query = $"inset into user_registration(user_email) values('{txtEmail.Text}')";
+            //var result = helper.ExecuteNonQuery(query);
+
+            //if (result > 0)
+            //{
+            //    var client = new MessageExchangePatternClient("WSDualHttpBinding_IMessageExchangePattern");
+            //    client.SendEmail(txtEmail.Text);
+
+            //    GridView1.DataBind();
+            //}
+            //else
+            //{
+            //    ShowMessage("데이터베이스에 입력 할 수 없습니다.");
+            //}
         }
-		catch (Exception ex)
+		catch (FaultException ex)
 		{
             ShowMessage(ex.Message);
         }

@@ -28,17 +28,6 @@ namespace MessageExchangePatternInWcfLibrary
             {
                 database.SetData(query);
             }
-
-            query = new SqliteQuery();
-            query.Type = QueryType.Select;
-            query.Table = "user_registration";
-            query.Value = "count(*)";
-
-            DataTable result = null;
-            using (var database = new Sqlite(_dbFile))
-            {
-                result = database.GetData(query);
-            }
         }
     }
 }

@@ -72,17 +72,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InterfaceLib\InterfaceLib.csproj">
-      <Project>{16689907-d7a7-4a61-8e43-d5cb4b5201ab}</Project>
-      <Name>InterfaceLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MessageExchangePatternInWcfLibrary\MessageExchangePatternInWcfLibrary.csproj">
       <Project>{9f40d48e-9e9a-44b4-8a79-8348f1523475}</Project>
       <Name>MessageExchangePatternInWcfLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SqliteLib\SqliteLib.csproj">
-      <Project>{8699bc82-00af-4b1e-b413-97db6b851c99}</Project>
-      <Name>SqliteLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
